@@ -1,0 +1,235 @@
+
+<!-- Formulario de prueba -->
+<form [formGroup]="customer.form" class="normal-form" (submit)="onSaveForm()">
+
+  <mat-tab-group>
+
+  <mat-tab label="DATOS">
+
+      <div class="container">
+
+        <mat-form-field>
+          <input matInput formControlName="IDCG" placeholder="ID CG" name="IDCG" [(ngModel)]="this.customer.selected.IDCG">
+         </mat-form-field>
+         <mat-form-field>
+          <input matInput formControlName="IDLOCAL"  placeholder="ID LOCAL" name="IDLOCAL" [(ngModel)]="this.customer.selected.IDLOCAL">
+        </mat-form-field>
+
+       <mat-form-field>
+          <input matInput formControlName="IDENT"  placeholder="ID ENT" name="IDENT" [(ngModel)]="this.customer.selected.IDENT">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput formControlName="DNI"  placeholder="DNI DEL NIÑO" name="DNI" [(ngModel)]="this.customer.selected.DNI">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput formControlName="CODIGO"  placeholder="CODIGO DEL NIÑO(A) PNCM" name="CODIGO" [(ngModel)]="this.customer.selected.CODIGO">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput formControlName="FECHA_EVA"  placeholder="FECHA DE EVALUACIÓN" name="FECHA_EVA" [(ngModel)]="this.customer.selected.FECHA_EVA">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput formControlName="FECHA_NAC"  placeholder="FECHA NACIMIENTO" name="FECHA_NAC" [(ngModel)]="this.customer.selected.FECHA_NAC">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput formControlName="EDAD"  placeholder="EDAD DEL NIÑO(A) (en meses)" name="EDAD" [(ngModel)]="this.customer.selected.EDAD">
+        </mat-form-field>
+        <br>
+        <br>
+        <br>
+      <mat-label>.................</mat-label>
+      </div>
+  </mat-tab>
+
+  <mat-tab label="CARTILLA">
+    <div class="container">
+    <label>De estas figuras, ¿cuál o cuáles son las que (NOMBRE) generalmente
+      realiza?
+      LEA EN VOZ ALTA LA(S) OPCIÓN(ES) ELEGIDA(S) Y <strong>CIRCULE LA DE MAYOR
+      NUMERACIÓN QUE GENERALMENTE </strong>REALIZA LA(EL) NIÑA(O).</label>&nbsp;
+      <mat-label>Levanta el tronco apoyándose en
+          brazos y rodillas</mat-label><br>
+    <mat-form-field class="example-full-width">
+      <input matInput formControlName="E1A1"  placeholder="" name="E1A1" [(ngModel)]="this.customer.selected.E1A1">
+    </mat-form-field><br>
+
+    <mat-label>Se sienta sin apoyarse en objetos y
+        sostiene la cabeza</mat-label>
+    <mat-form-field>
+      <input matInput  formControlName="E1A2"  placeholder="" name="E1A2" [(ngModel)]="this.customer.selected.E1A2">
+    </mat-form-field><br>
+
+    <mat-label>Se pone de pie agarrándose de algo</mat-label>
+    <mat-form-field>
+      <input matInput formControlName="E1A3"  placeholder="" name="E1A3" [(ngModel)]="this.customer.selected.E1A3">
+    </mat-form-field><br>
+
+    <mat-label>Da unos pasos agarrándose de algo</mat-label>
+    <mat-form-field>
+      <input matInput formControlName="E1A4"  placeholder="" name="E1A4" [(ngModel)]="this.customer.selected.E1A4">
+    </mat-form-field><br>
+
+    <mat-label>Se pone de pie sin agarrarse de nada</mat-label>
+    <mat-form-field>
+      <input matInput formControlName="E1A5"  placeholder="" name="E1A5" [(ngModel)]="this.customer.selected.E1A5">
+    </mat-form-field><br>
+
+    <mat-label>camina sola/o con soltura</mat-label>
+    <mat-form-field>
+      <input matInput formControlName="E1A6"  placeholder="" name="E1A6" [(ngModel)]="this.customer.selected.E1A6">
+    </mat-form-field><br>
+
+    <mat-label>NR/NS</mat-label>
+    <mat-form-field>
+      <input matInput formControlName="E1A7"  placeholder="" name="E1A7" [(ngModel)]="this.customer.selected.E1A7">
+    </mat-form-field><br>
+    
+    <label>En el lugar en el cual <strong> pasa mayor tiempo</strong> ¿tiene un <strong>espacio sin objetos</strong> en el que pueda
+        desplazarse/caminar libremente?
+        DE SER NECESARIO, PREGUNTE:
+        1) ¿De qué tamaño es?
+        2) ¿Cómo es el piso de ese lugar?
+        MARQUE SÍ CUANDO LA MADRE REPORTE UN ESPACIO DE <strong>PISO FIRME Y LIBRE DE OBJETOS DE 3 METROS</strong>
+        LINEALES APROXIMADAMENTE.</label><br>
+    <mat-form-field>
+    <mat-select formControlName="E2"   placeholder=""  name="E2" [(ngModel)]="this.customer.selected.E2">
+      <mat-option value="">Seleccione</mat-option>
+      <mat-option value="1">SI</mat-option>
+      <mat-option value="2">NO</mat-option>
+      <mat-option value="8">NR/NS</mat-option>
+      <!-- <mat-option *ngfor="let respuesta of respuestas" [value]="respuesta.codigo">{{respuesta.nombre}}</mat-option> -->
+    </mat-select>
+  </mat-form-field><br>
+
+    <label>¿trata de imitar las palabras que escucha?
+        MARQUE SÍ CUANDO LA MADRE REPORTE QUE SU HIJA(O) EMITE VOCALES (A, O), SÍLABAS (BA, TA) O
+        PALABRAS (PAPA, MAMÁ) COMO IMITACIÓN O EN RESPUESTA A LAS VERBALIZACIONES DE OTRAS
+        PERSONAS.</label><br>
+    <mat-form-field>
+    <mat-select  formControlName="E3"  placeholder="" name="E3" [(ngModel)]="this.customer.selected.E3">
+      <mat-option value="">Seleccione</mat-option>
+      <mat-option value="1">SI</mat-option>
+      <mat-option value="2">NO</mat-option>
+      <mat-option value="8">NR/NS</mat-option>
+      <!-- <mat-option *ngfor="let respuesta of respuestas" [value]="respuesta.codigo">{{respuesta.nombre}}</mat-option> -->
+    </mat-select>
+  </mat-form-field><br>
+
+    <label>¿Entiende cuando usted le dice “NO” aunque no le haga caso?
+        REFIERE A SI LA (EL) NIÑA(O) ENTIENDE EL SIGNIFICADO DE LA PALABRA “NO”</label><br>
+    <mat-form-field>
+    <mat-select formControlName="E4"  placeholder="" name="E4" [(ngModel)]="this.customer.selected.E4">
+      <mat-option value="">Seleccione</mat-option>
+      <mat-option value="SI">SI</mat-option>
+      <mat-option value="NO">NO</mat-option>
+      <mat-option value="NSNO">NSNO</mat-option>
+      <!-- <mat-option *ngfor="let respuesta of respuestas" [value]="respuesta.codigo">{{respuesta.nombre}}</mat-option> -->
+    </mat-select>
+  </mat-form-field><br>
+
+    <label>¿entiende una orden sencilla como por ejemplo “dame” o “toma”?</label><br>
+    <mat-form-field>
+    <mat-select formControlName="E5"  placeholder="" name="E5" [(ngModel)]="this.customer.selected.E5">
+      <mat-option value="">Seleccione</mat-option>
+      <mat-option value="1">SI</mat-option>
+      <mat-option value="2">NO</mat-option>
+      <mat-option value="8">NR/NS</mat-option><br>
+      <!-- <mat-option *ngfor="let respuesta of respuestas" [value]="respuesta.codigo">{{respuesta.nombre}}</mat-option> -->
+    </mat-select>
+  </mat-form-field><br>
+
+        <label> Cuando está con (NOMBRE) ¿usted le habla de lo que están haciendo en ese momento?
+            SIEMPRE LEA:
+            Por ejemplo, usted le dice: “estamos comiendo tu papita” mientras comen.</label><br>
+        <mat-form-field>
+        <mat-select formControlName="E6"  placeholder="" name="E6" [(ngModel)]="this.customer.selected.E6">
+          <mat-option value="">Seleccione</mat-option>
+          <mat-option value="1">SI</mat-option>
+          <mat-option value="2">NO</mat-option>
+          <mat-option value="8">NR/NS</mat-option><br>
+          <!-- <mat-option *ngfor="let respuesta of respuestas" [value]="respuesta.codigo">{{respuesta.nombre}}</mat-option> -->
+        </mat-select>
+      </mat-form-field>
+    </div>
+    </mat-tab>
+    <mat-tab label="OBS">
+        <div class="container">
+      <label>
+          Durante la entrevista y ante alguna o la
+          mayoría de las preguntas, la madre
+          mostró:
+      </label><br>
+      <mat-label>Estar apurada, incómoda, fastidiada o ser poco cooperativa</mat-label><br>
+      <mat-form-field>
+      <mat-select  formControlName="F7"  placeholder="" name="F7" [(ngModel)]="this.customer.selected.F7">
+          <mat-option value="">Seleccione</mat-option>
+          <mat-option value="1">SI</mat-option>
+          <mat-option value="2">NO</mat-option>
+        </mat-select>
+        </mat-form-field><br>
+
+        <mat-label>Dificultad para entender</mat-label><br>
+    <mat-form-field>
+        <mat-select formControlName="F8"  placeholder="" name="F8" [(ngModel)]="this.customer.selected.F8">
+            <mat-option value="">Seleccione</mat-option>
+            <mat-option value="1">SI</mat-option>
+            <mat-option value="2">NO</mat-option>
+          </mat-select>
+    </mat-form-field><br>
+
+    <mat-label>Estar indecisa de la respuesta</mat-label><br>
+    <mat-form-field>
+        <mat-select formControlName="F9"  placeholder="" name="F9" [(ngModel)]="this.customer.selected.F9">
+            <mat-option value="">Seleccione</mat-option>
+            <mat-option value="1">SI</mat-option>
+            <mat-option value="2">NO</mat-option>
+          </mat-select>
+    </mat-form-field><br>
+
+    <mat-label>Responder rápidamente sin analizar</mat-label><br>
+    <mat-form-field>
+        <mat-select formControlName="F10"  placeholder="" name="F10" [(ngModel)]="this.customer.selected.F10">
+            <mat-option value="">Seleccione</mat-option>
+            <mat-option value="SI">SI</mat-option>
+            <mat-option value="NO">NO</mat-option>
+          </mat-select>
+    </mat-form-field><br>
+
+    <mat-label>Dar respuestas imprecisas</mat-label><br>
+    <mat-form-field>
+        <mat-select formControlName="F11"  placeholder="" name="F11" [(ngModel)]="this.customer.selected.F11">
+            <mat-option value="">Seleccione</mat-option>
+            <mat-option value="SI">SI</mat-option>
+            <mat-option value="NO">NO</mat-option>
+          </mat-select>
+    </mat-form-field><br>
+
+        <label>
+            En relación al desarrollo de su hijo(a)
+        </label><br>
+        <mat-label>Refiere algunas preocupaciones</mat-label><br>
+        <mat-form-field>
+            <mat-select formControlName="F12"  placeholder="" name="F12" [(ngModel)]="this.customer.selected.F12">
+                <mat-option value="">Seleccione</mat-option>
+                <mat-option value="SI">SI</mat-option>
+                <mat-option value="NO">NO</mat-option>
+              </mat-select>
+        </mat-form-field><br>
+        <mat-label>Parece desconocer algunas de sus características</mat-label>
+        <mat-form-field><br>
+            <mat-select formControlName="F13"  placeholder="" name="F13" [(ngModel)]="this.customer.selected.F13">
+                <mat-option value="">Seleccione</mat-option>
+                <mat-option value="SI">SI</mat-option>
+                <mat-option value="NO">NO</mat-option>
+              </mat-select>
+        </mat-form-field><br>
+      </div>
+    </mat-tab>
+  <mat-tab label="ACCIONES">
+  <div class="container">
+    <button mat-flat-button color="primary"  type="submit" [disabled]="customer.form.invalid"><mat-icon>save</mat-icon>Guardar</button>&nbsp;
+    </div>
+  </mat-tab>
+
+</mat-tab-group>
+
+</form>

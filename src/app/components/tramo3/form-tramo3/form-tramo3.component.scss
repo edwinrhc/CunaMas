@@ -1,0 +1,25 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    height: 400px;
+    overflow: auto;
+
+}
+
+.container > * {
+    width: 96%;
+    margin-left: 1%;;
+
+}
+td {
+    padding-right: 8px;
+  }
+
+  .placeholder{
+    padding-right: 8px;
+  }
+
+  .example-full-width {
+    width: 100%;
+  }

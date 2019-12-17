@@ -1,0 +1,286 @@
+
+
+<!-- Formulario de prueba -->
+<form [formGroup]="tramo4.form" class="normal-form" (submit)="onSaveFormtramo4()">
+<mat-tab-group>
+
+    <mat-tab label="DATOS">
+  
+        <div class="container">
+  
+          <mat-form-field>
+            <input matInput  formControlName="IDCG" placeholder="ID CG" name="IDCG" [(ngModel)]="this.tramo4.selected.IDCG">
+           </mat-form-field>
+           <mat-form-field>
+            <input matInput  formControlName="IDLOCAL" placeholder="ID LOCAL" name="IDLOCAL" [(ngModel)]="this.tramo4.selected.IDLOCAL">
+          </mat-form-field>
+         <mat-form-field>
+            <input matInput formControlName="IDENT" placeholder="ID ENT" name="IDENT" [(ngModel)]="this.tramo4.selected.IDENT">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput formControlName="DNI" placeholder="DNI DEL NIÑO" name="DNI" [(ngModel)]="this.tramo4.selected.DNI">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput formControlName="CODIGO" placeholder="CODIGO DEL NIÑO(A) PNCM" name="CODIGO" [(ngModel)]="this.tramo4.selected.CODIGO">
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput  formControlName="FECHA_EVA" placeholder="FECHA DE EVALUACIÓN" name="FECHA_EVA" [(ngModel)]="this.tramo4.selected.FECHA_EVA">
+          </mat-form-field>
+          
+          <mat-form-field>
+            <input matInput  formControlName="FECHA_NAC" placeholder="FECHA NACIMIENTO" name="FECHA_NAC" [(ngModel)]="this.tramo4.selected.FECHA_NAC">
+          </mat-form-field>
+          
+          <mat-form-field>
+            <input matInput  formControlName="EDAD" placeholder="EDAD DEL NIÑO(A) (en meses)" name="EDAD" [(ngModel)]="this.tramo4.selected.EDAD">
+          </mat-form-field>
+      
+        <br>
+        <br>
+        <br>
+      <mat-label>.................</mat-label>
+        </div>
+    </mat-tab>
+  
+    <mat-tab label="CARTILLA 1">
+      <div class="container">
+      
+        <mat-label>Cuando habla ¿dice frases con un sujeto y una acción como “bebé llora”?
+            SI LA MADRE RESPONDE SÍ, PREGUNTE:
+            Por ejemplo ¿qué frases dice?
+            MARQUE SÍ CUANDO LA MADRE REPORTE UNA FRASE QUE TIENE POR LO MENOS UN SUJETO Y UN VERBO O ACCIÓN.</mat-label>
+      <mat-form-field class="example-full-width">
+          <mat-select placeholder="" name="H1" [(ngModel)]="this.tramo4.selected.H1"  formControlName="H1">
+              <mat-option value="">Seleccione</mat-option>
+              <mat-option value="1">SI</mat-option>
+              <mat-option value="2">NO</mat-option>
+              <mat-option value="8">NR/NS</mat-option>
+            </mat-select>
+      </mat-form-field><br>
+
+      <mat-label>Cuando habla ¿dice oraciones como “vamos a la casa”, “dónde está la abuela”, “mi mamá es linda”?
+          SI LA MADRE RESPONDE SÍ, PREGUNTE:
+          Por ejemplo ¿qué oraciones dice?
+          MARQUE SÍ CUANDO LA MADRE REPORTE UNA ORACIÓN QUE INCLUYE ARTÍCULOS (POR EJEMPLO EL, LA, LOS) Y/O PREPOSICIONES (POR EJEMPLO MI, PARA, EN).</mat-label>
+      <mat-form-field><br>
+        <mat-select placeholder="" name="H2" [(ngModel)]="this.tramo4.selected.H2" formControlName="H2">
+            <mat-option value="">Seleccione</mat-option>
+            <mat-option value="1">SI</mat-option>
+            <mat-option value="2">NO</mat-option>
+            <mat-option value="8">NR/NS</mat-option>
+          </mat-select>
+      </mat-form-field><br>
+
+      
+      <mat-label>¿Entiende palabras que indican la posición de las cosas como “dentro” y “fuera” o “encima” y “debajo”?</mat-label>
+      <mat-form-field>
+        <mat-select placeholder="" name="H3" [(ngModel)]="this.tramo4.selected.H3" formControlName="H3">
+            <mat-option value="">Seleccione</mat-option>
+            <mat-option value="1">SI</mat-option>
+            <mat-option value="2">NO</mat-option>
+            <mat-option value="8">NR/NS</mat-option>
+          </mat-select>
+      </mat-form-field><br>
+
+      <mat-label>Generalmente ¿“participa” en las conversaciones con adultos? SIEMPRE LEA: Por ejemplo, su hija(o) pregunta o responde o se expresa verbalmente como parte de la conversación de los adultos.</mat-label>
+      <mat-form-field>
+        <mat-select placeholder="" name="H4" [(ngModel)]="this.tramo4.selected.H4" formControlName="H4">
+            <mat-option value="">Seleccione</mat-option>
+            <mat-option value="1">SI</mat-option>
+            <mat-option value="2">NO</mat-option>
+            <mat-option value="8">NR/NS</mat-option>
+          </mat-select>
+      </mat-form-field><br>
+
+      <mat-label>Cuando hace un garabato o dibujo ¿dice lo que dibujó? SIEMPRE LEA: Por ejemplo, le dice que ha dibujado a una mamá, a una niña o un carro aunque su dibujo no se parezca a ninguno de estos objetos.</mat-label>
+      <mat-form-field>
+        <mat-select placeholder="" name="H5" [(ngModel)]="this.tramo4.selected.H5" formControlName="H5">
+            <mat-option value="">Seleccione</mat-option>
+            <mat-option value="1">SI</mat-option>
+            <mat-option value="2">NO</mat-option>
+            <mat-option value="8">NR/NS</mat-option>
+          </mat-select>
+      </mat-form-field><br>
+
+      <mat-label>¿Imita lo que hace una persona o personaje cuando esta (este) no se encuentra presente?
+          DE SER NECESARIO, LEA:
+          Por ejemplo, su hija(o) imita lo que hace o dice su tía(o) cuando ella (él) no está o imita a un personaje como el hombre araña cuando no lo ve.</mat-label>
+      <mat-form-field>
+        <mat-select placeholder="" name="H6" [(ngModel)]="this.tramo4.selected.H6" formControlName="H6">
+            <mat-option value="">Seleccione</mat-option>
+            <mat-option value="1">SI</mat-option>
+            <mat-option value="2">NO</mat-option>
+            <mat-option value="8">NR/NS</mat-option>
+          </mat-select>
+      </mat-form-field><br>
+
+      <mat-label>¿Le habla a sus muñecos o juguetes?
+          REFIERE A SI LA (EL) NIÑA(O) HABLA CON SUS JUGUETES CUANDO JUEGA.</mat-label>
+      <mat-form-field>
+        <mat-select placeholder="" name="H7" [(ngModel)]="this.tramo4.selected.H7" formControlName="H7">
+            <mat-option value="">Seleccione</mat-option>
+            <mat-option value="1">SI</mat-option>
+            <mat-option value="2">NO</mat-option>
+            <mat-option value="8">NR/NS</mat-option>
+          </mat-select>
+      </mat-form-field><br>
+
+      <mat-label>En casa  tiene:
+          A. ¿Materiales especialmente hechos para jugar como una pelota o una muñeca?
+          DE SER NECESARIO, LEA:
+          Considere si en casa tiene materiales que solo pueden ser usados de una forma específica para jugar, como cubos para encajar, pelotas, rompecabezas, muñecos, etc.</mat-label>
+      <mat-form-field>
+        <mat-select placeholder="" name="H8A" [(ngModel)]="this.tramo4.selected.H8A" formControlName="H8A">
+            <mat-option value="">Seleccione</mat-option>
+            <mat-option value="1">SI</mat-option>
+            <mat-option value="2">NO</mat-option>
+            <mat-option value="8">NR/NS</mat-option>
+          </mat-select>
+      </mat-form-field><br>
+
+      <mat-label>B. ¿Y tiene otros materiales con los que puede jugar como bloques, palitos, botellas, lápices o algún tipo de papel?
+          SIEMPRE LEA:
+          Considere si en casa tiene materiales que pueden ser utilizados de diferentes formas al jugar como lápices, papeles, bloques, plastilinas, objetos de la casa (ollas, botellas de plástico), objetos de origen natural (conchas, palitos, plantas).</mat-label>
+      <mat-form-field>
+        <mat-select placeholder="" name="H8B" [(ngModel)]="this.tramo4.selected.H8B" formControlName="H8B">
+            <mat-option value="">Seleccione</mat-option>
+            <mat-option value="1">SI</mat-option>
+            <mat-option value="2">NO</mat-option>
+            <mat-option value="8">NR/NS</mat-option>
+          </mat-select>
+      </mat-form-field><br>
+
+      <mat-label>¿llora, grita o hace pataletas la mayor parte del tiempo?</mat-label>
+      <mat-form-field>
+        <mat-select placeholder="" name="H9" [(ngModel)]="this.tramo4.selected.H9" formControlName="H9">
+            <mat-option value="">Seleccione</mat-option>
+            <mat-option value="1">SI</mat-option>
+            <mat-option value="2">NO</mat-option>
+            <mat-option value="8">NR/NS</mat-option>
+          </mat-select>
+      </mat-form-field><br>
+
+      <mat-label>Cuando  quiere algo y usted le dice que espere, generalmente ¿espera “tranquila(o)”?</mat-label>
+      <mat-form-field>
+        <mat-select placeholder="" name="H10" [(ngModel)]="this.tramo4.selected.H10" formControlName="H10">
+            <mat-option value="">Seleccione</mat-option>
+            <mat-option value="1">SI ESPERA TRANQUILAMENTE</mat-option>
+            <mat-option value="2">SI ESPERA PERO NO TRANQUILAMENTE</mat-option>
+            <mat-option value="3">NO ESPERA</mat-option>
+            <mat-option value="8">NR/NS</mat-option>
+          </mat-select>
+      </mat-form-field><br>
+
+      <mat-label>Cuando  quiere algo y usted le dice que NO, generalmente ¿se hace daño, agrede a los demás o daña las cosas?</mat-label>
+      <mat-form-field>
+        <mat-select placeholder="" name="H11" [(ngModel)]="this.tramo4.selected.H11" formControlName="H11">
+            <mat-option value="">Seleccione</mat-option>
+            <mat-option value="1">SI</mat-option>
+            <mat-option value="2">NO</mat-option>
+            <mat-option value="8">NR/NS</mat-option>
+          </mat-select>
+      </mat-form-field><br>
+
+      <mat-label>En los últimos 15 días, ¿Cuántas veces usted le ha dado un palmazo, le ha jalado de los cabellos o la oreja o le ha golpeado con un objeto en cualquier parte de su cuerpo a (NOMBRE), de 1 a 3 veces, de 4 a 6 veces o más de 6 veces?</mat-label>
+      <mat-form-field>
+        <mat-select placeholder="" name="H12" [(ngModel)]="this.tramo4.selected.H12" formControlName="H12">
+            <mat-option value="">Seleccione</mat-option>
+            <mat-option value="1">NINGUNA</mat-option>
+            <mat-option value="2">DE 1 A 3 VECES</mat-option>
+            <mat-option value="3">DE 4 A 6 VECES</mat-option>
+            <mat-option value="8">NR/NS</mat-option>
+          </mat-select>
+      </mat-form-field><br>
+
+
+      
+    </div>
+    </mat-tab>
+  
+
+      <mat-tab label="OBSERVACIONES">
+          <div class="container">
+        <label>
+            Durante la entrevista y ante alguna o la
+            mayoría de las preguntas, la madre
+            mostró:
+        </label>&nbsp;
+        <mat-label>Estar apurada, incómoda, fastidiada o ser poco cooperativa</mat-label>
+        <mat-form-field>
+        <mat-select placeholder="" name="OBSM1" [(ngModel)]="this.tramo4.selected.OBSM1" formControlName="OBSM1">
+            <mat-option value="">Seleccione</mat-option>
+            <mat-option value="SI">SI</mat-option>
+            <mat-option value="NO">NO</mat-option>
+          </mat-select>
+        </mat-form-field><br>
+
+          <mat-label>Dificultad para entender</mat-label>
+          <mat-form-field>
+          <mat-select placeholder="" name="OBSM2" [(ngModel)]="this.tramo4.selected.OBSM2" formControlName="OBSM2">
+              <mat-option value="">Seleccione</mat-option>
+              <mat-option value="SI">SI</mat-option>
+              <mat-option value="NO">NO</mat-option>
+            </mat-select>
+        </mat-form-field><br>
+
+      <mat-label>Estar indecisa de la respuesta</mat-label>
+      <mat-form-field>
+          <mat-select placeholder="" name="OBSM3" [(ngModel)]="this.tramo4.selected.OBSM3" formControlName="OBSM3">
+              <mat-option value="">Seleccione</mat-option>
+              <mat-option value="SI">SI</mat-option>
+              <mat-option value="NO">NO</mat-option>
+            </mat-select>
+      </mat-form-field><br>
+
+      <mat-label>Responder rápidamente sin analizar</mat-label>
+      <mat-form-field>
+          <mat-select placeholder="" name="OBSM4" [(ngModel)]="this.tramo4.selected.OBSM4"  formControlName="OBSM4">
+              <mat-option value="">Seleccione</mat-option>
+              <mat-option value="SI">SI</mat-option>
+              <mat-option value="NO">NO</mat-option>
+            </mat-select>
+      </mat-form-field><br>
+
+      <mat-label>Dar respuestas imprecisas</mat-label>
+      <mat-form-field>
+          <mat-select placeholder="" name="OBSM5" [(ngModel)]="this.tramo4.selected.OBSM5" formControlName="OBSM5">
+              <mat-option value="">Seleccione</mat-option>
+              <mat-option value="SI">SI</mat-option>
+              <mat-option value="NO">NO</mat-option>
+            </mat-select>
+      </mat-form-field><br>
+
+        <mat-label>En relación al desarrollo de su hijo(a) </mat-label><br>
+
+          <mat-label>Refiere algunas preocupaciones</mat-label>
+          <mat-form-field>
+              <mat-select placeholder="" name="OBSH6" [(ngModel)]="this.tramo4.selected.OBSH6" formControlName="OBSH6">
+                  <mat-option value="">Seleccione</mat-option>
+                  <mat-option value="SI">SI</mat-option>
+                  <mat-option value="NO">NO</mat-option>
+                </mat-select>
+          </mat-form-field><br>
+          <mat-label>Parece desconocer algunas de sus características</mat-label>
+          <mat-form-field>
+              <mat-select placeholder="" name="OBSH7" [(ngModel)]="this.tramo4.selected.OBSH7" formControlName="OBSH7">
+                  <mat-option value="">Seleccione</mat-option>
+                  <mat-option value="SI">SI</mat-option>
+                  <mat-option value="NO">NO</mat-option>
+                </mat-select>
+          </mat-form-field><br>
+        </div>
+        </mat-tab>
+      <!-- <button mat-flat-button color="primary" (click)="onSaveFormtramo4()">
+
+        <mat-icon>save</mat-icon>save
+      </button> -->
+    <mat-tab label="GUARDAR">
+    <div class="container">
+      <button mat-raised-button color="primary" type="submit" [disabled]="tramo4.form.invalid"><mat-icon>save</mat-icon>Guardar</button>&nbsp;
+      </div>
+    </mat-tab>
+  
+  </mat-tab-group>
+</form>
+  

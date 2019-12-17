@@ -1,0 +1,80 @@
+
+
+<mat-card> MODULO DIT ENDES - TRAMO 4 (24 - 36 MESES)</mat-card>
+
+<mat-card>
+
+
+<div class="example-container mat-elevation-z8">
+<mat-form-field>
+  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Buscar">
+</mat-form-field>
+
+
+
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+    <!-- SAve Column -->
+    <ng-container matColumnDef="new">
+      <th mat-header-cell *matHeaderCellDef> <button mat-flat-button color="accent" (click)="onAdd()">
+          <mat-icon>save</mat-icon>Nuevo
+        </button> </th>
+      <td mat-cell *matCellDef="let element"></td>
+    </ng-container>
+
+    <!-- IDCG Column -->
+    <ng-container matColumnDef="IDCG">
+      <th mat-header-cell *matHeaderCellDef > IDCG </th>
+      <td mat-cell *matCellDef="let element"> {{element.IDCG}} </td>
+    </ng-container>
+
+    <!-- IDLOCAL Column -->
+    <ng-container matColumnDef="IDLOCAL">
+      <th mat-header-cell *matHeaderCellDef > IDLOCAL </th>
+      <td mat-cell *matCellDef="let element"> {{element.IDLOCAL}} </td>
+    </ng-container>
+
+    <!-- IDENT Column -->
+    <ng-container matColumnDef="IDENT">
+      <th mat-header-cell *matHeaderCellDef> IDENT </th>
+      <td mat-cell *matCellDef="let element"> {{element.IDENT}} </td>
+    </ng-container>
+    <!-- DNI Column -->
+    <ng-container matColumnDef="DNI">
+      <th mat-header-cell *matHeaderCellDef > DNI </th>
+      <td mat-cell *matCellDef="let element"> {{element.DNI}} </td>
+    </ng-container>
+
+    <!-- CODIGO Column -->
+    <ng-container matColumnDef="CODIGO">
+      <th mat-header-cell *matHeaderCellDef > CODIGO </th>
+      <td mat-cell *matCellDef="let element"> {{element.CODIGO}} </td>
+    </ng-container>
+
+
+
+ <!-- Symbol Column -->
+ <ng-container matColumnDef="actions">
+  <th mat-header-cell *matHeaderCellDef> Actions </th>
+  <td mat-cell *matCellDef="let element">
+    <button mat-flat-button color="primary" (click)="onEdit(element)">Edit<mat-icon>edit</mat-icon> </button>&nbsp;
+    <button mat-flat-button color="warn" (click)="onDelete(element.id)">Delete<mat-icon>delete</mat-icon> </button>
+    &nbsp;
+
+
+
+  </td>
+</ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns  sticky: true"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
+<h3>Export as XLSX</h3>
+<div class="container">
+  <button mat-raised-button color="primary" (click)="exportAsXLSX()">
+    <mat-icon>trending_down</mat-icon>Export</button>
+    &nbsp;
+    <button mat-raised-button color="accent" (click)="exportAsXLSXFiltered()">
+        <mat-icon>trending_down</mat-icon>Filtered</button>
+</div>
+</mat-card> 
