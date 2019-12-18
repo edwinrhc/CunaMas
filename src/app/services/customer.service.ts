@@ -60,7 +60,7 @@ export class CustomerService {
   
   constructor(private readonly afs: AngularFirestore) {
     // Recuperamos la data
-    this.customerColletion  = afs.collection<CustomerI>('customers');
+    this.customerColletion  = afs.collection<CustomerI>('tramo1');
     this.customers = this.customerColletion.snapshotChanges()
           .pipe( map ( actions => actions.map( a => {
 

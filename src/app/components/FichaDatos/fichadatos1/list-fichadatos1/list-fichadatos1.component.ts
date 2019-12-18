@@ -5,6 +5,7 @@ import { MatDialog, MatDialogConfig } from '@angular/material';
 // Servicios
 import { FichaDatos1Service } from '../../../../services/fichadatos1.service';
 import { ExporterService } from '../../../../services/exporter.service';
+
 import { FichadatosForm1Component } from '../fichadatos-form1/fichadatos-form1.component';
 
 
@@ -34,6 +35,8 @@ displayedColumns: string[] = [
                private excelService: ExporterService) { }
 
   ngOnInit() {
+
+    this.fichadato1Service.getAllFichaDatos1().subscribe(res => this.dataSource.data = res);
   }
 
   exportAsXLSX() : void {
@@ -153,8 +156,8 @@ displayedColumns: string[] = [
       this.fichadato1Service.selected.G2RESULTADO = null,
       this.fichadato1Service.selected.H1DNI_NINO = null,
       this.fichadato1Service.selected.H2CARNET_CONTROLES_CRED = null,
-      this.fichadato1Service.selected.H3TRAJETA_RESULTADO = null,
-      this.fichadato1Service.selected.OBSERVACIONES = null
+      this.fichadato1Service.selected.RESULTADO_TARJETA = null,
+      this.fichadato1Service.selected.OBSERVACIONES = null,
         
       this.fichadato1Service.selected.id  = null
     }

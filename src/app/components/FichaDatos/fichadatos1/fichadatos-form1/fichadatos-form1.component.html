@@ -32,7 +32,7 @@
             </div>
         </mat-tab>
       
-        <mat-tab label="DIRECCIÓN">
+        <mat-tab label="DIRECCIÓN"> 
           <div class="container">
           
             <mat-label>A. UBICACIÓN GEOGRÁFICA</mat-label><br>
@@ -48,7 +48,7 @@
     
           <mat-label>A.2 Provincia</mat-label>
           <mat-form-field><br>
-            <mat-select placeholder="" name="A2PROV" [(ngModel)]="this.fichadatos1Service.selected.A2PROV" formControlName="H2">
+            <mat-select placeholder="" name="A2PROV" [(ngModel)]="this.fichadatos1Service.selected.A2PROV" formControlName="A2PROV">
                 <mat-option value="">Seleccione</mat-option>
                 <mat-option value="1">SI</mat-option>
                 <mat-option value="2">NO</mat-option>
@@ -59,7 +59,7 @@
           
           <mat-label>A.3 Distrito</mat-label>
           <mat-form-field>
-            <mat-select placeholder="" name="A3DISTRITO" [(ngModel)]="this.fichadatos1Service.selected.A3DISTRITO" formControlName="H3">
+            <mat-select placeholder="" name="A3DISTRITO" [(ngModel)]="this.fichadatos1Service.selected.A3DISTRITO" formControlName="A3DISTRITO">
                 <mat-option value="">Seleccione</mat-option>
                 <mat-option value="1">SI</mat-option>
                 <mat-option value="2">NO</mat-option>
@@ -80,17 +80,17 @@
             <mat-form-field>
                     <input matInput formControlName="B2NOMBRE_VIA" placeholder="" name="B2NOMBRE_VIA" [(ngModel)]="this.fichadatos1Service.selected.B2NOMBRE_VIA">
                   </mat-form-field> <br>
-    
+  
           <mat-label>B.3 Dirección</mat-label>
           <mat-form-field>
                 <input matInput formControlName="B3DIRECCION" placeholder="" name="B3DIRECCION" [(ngModel)]="this.fichadatos1Service.selected.B3DIRECCION">
           </mat-form-field><br>
-    
+        <!-- ERROR -->
           <mat-label>B.10 Referencia</mat-label>
           <mat-form-field>
-                <input matInput formControlName="B10REFERENCIA" placeholder="" name="B10REFERENCIA" [(ngModel)]="this.fichadatos1Service.selected.B10REFERENCIA">
+            <input matInput formControlName="B10REFERENCIA" placeholder="" name="B10REFERENCIA" [(ngModel)]="this.fichadatos1Service.selected.B10REFERENCIA">
           </mat-form-field><br>
-    
+   
           <mat-label>B.11 Teléfono(s)</mat-label><br>
           <mat-form-field>
                 <input matInput formControlName="B11TELEFONO" placeholder="" name="B11TELEFONO" [(ngModel)]="this.fichadatos1Service.selected.B11TELEFONO">
@@ -100,11 +100,11 @@
           <mat-form-field>
                 <input matInput formControlName="B12CELL" placeholder="" name="B12CELL" [(ngModel)]="this.fichadatos1Service.selected.B12CELL">
           </mat-form-field><br>
-
+ 
           <mat-label>
                 C. DATOS DE LA MADRE USUARIA
           </mat-label><br>
-    
+  
           <mat-label>C.1 Nombres</mat-label><br>
           <mat-form-field>
                 <input matInput formControlName="C1NOMBRE" placeholder="" name="C1NOMBRE" [(ngModel)]="this.fichadatos1Service.selected.C1NOMBRE">
@@ -119,7 +119,7 @@
           <mat-form-field>
                 <input matInput formControlName="C3APELLIDOM" placeholder="" name="C3APELLIDOM" [(ngModel)]="this.fichadatos1Service.selected.C3APELLIDOM">
           </mat-form-field><br>
-    
+
           <mat-label>C.4 DNI (8 dígitos)</mat-label><br>
           <mat-form-field>
                 <input matInput formControlName="C4DNI" placeholder="" name="C4DNI" [(ngModel)]="this.fichadatos1Service.selected.C4DNI">
@@ -176,11 +176,12 @@
           <mat-label>Nombre Supervisor</mat-label><br>
           <mat-form-field>
                 <input matInput formControlName="E2NOMBRE_SUPER" placeholder="" name="E2NOMBRE_SUPER" [(ngModel)]="this.fichadatos1Service.selected.E2NOMBRE_SUPER">
-          </mat-form-field><br>
-
+          </mat-form-field><br> 
+          <!-- PRUEBA 1 -->
+ 
           <mat-label>Apellido Supervisor</mat-label><br>
           <mat-form-field>
-                <input matInput formControlName="E2APELLIDO_SUPER" placeholder="" name="E2APELLIDO_SUPER" [(ngModel)]="this.fichadatos1Service.selected.E1APELLIDO_ENCUES">
+                <input matInput formControlName="E2APELLIDO_SUPER" placeholder="" name="E2APELLIDO_SUPER" [(ngModel)]="this.fichadatos1Service.selected.E2APELLIDO_SUPER">
           </mat-form-field><br>
    
           <mat-label>DNI (8 dígitos) Supervisor</mat-label><br>
@@ -205,7 +206,8 @@
           <mat-form-field>
                 <input matInput formControlName="F1HORA_HASTA_E" placeholder="" name="F1HORA_HASTA_E" [(ngModel)]="this.fichadatos1Service.selected.F1HORA_HASTA_E">
           </mat-form-field><br>
-
+          <!-- PRUEBA 2 -->
+  
           <mat-label>RESULTADO DE ENCUES. </mat-label><br>
           <mat-form-field>
                 <input matInput formControlName="F1RESULTADO_ENCUESTA_E" placeholder="" name="F1RESULTADO_ENCUESTA_E" [(ngModel)]="this.fichadatos1Service.selected.F1RESULTADO_ENCUESTA_E">
@@ -235,7 +237,8 @@
           <mat-form-field>
                 <input matInput formControlName="F2HORA_HASTA_S" placeholder="" name="F2HORA_HASTA_S" [(ngModel)]="this.fichadatos1Service.selected.F2HORA_HASTA_S">
           </mat-form-field><br>
-
+          <!-- PRUEBA 3 -->
+ 
           <mat-label>RESULTADO DE ENCUES. </mat-label><br>
           <mat-form-field>
                 <input matInput formControlName="F2RESULTADO_ENCUESTA_S" placeholder="" name="F2RESULTADO_ENCUESTA_S" [(ngModel)]="this.fichadatos1Service.selected.F2RESULTADO_ENCUESTA_S">
@@ -263,7 +266,7 @@
           <mat-form-field>
                 <input matInput formControlName="G2RESULTADO" placeholder="" name="G2RESULTADO" [(ngModel)]="this.fichadatos1Service.selected.G2RESULTADO">
           </mat-form-field><br>
-    
+
           <mat-label>H. DOCUMENTACIÓN REVISADA</mat-label><br>
           <mat-label>(ENCUESTADOR: Circule toda la documentación de la que dispone la madre y le permita verla)</mat-label><br>
           <mat-label>1. DNI del niño (a)</mat-label>
@@ -274,6 +277,8 @@
               <mat-option value="NO">NO</mat-option>
             </mat-select>
           </mat-form-field><br>
+            <!-- PRUEBA 4 -->
+            
           <mat-label>2. Carnet de controles CRED</mat-label>
           <mat-form-field>
           <mat-select placeholder="" name="H2CARNET_CONTROLES_CRED" [(ngModel)]="this.fichadatos1Service.selected.H2CARNET_CONTROLES_CRED" formControlName="H2CARNET_CONTROLES_CRED">
@@ -282,27 +287,26 @@
               <mat-option value="NO">NO</mat-option>
             </mat-select>
           </mat-form-field><br>
+
+
           <mat-label>3. Tarjeta de resultados de hemoglobina</mat-label>
           <mat-form-field>
-          <mat-select placeholder="" name="H3TRAJETA_RESULTADO" [(ngModel)]="this.fichadatos1Service.selected.H3TRAJETA_RESULTADO" formControlName="H3TRAJETA_RESULTADO">
-              <mat-option value="">Seleccione</mat-option>
-              <mat-option value="SI">SI</mat-option>
-              <mat-option value="NO">NO</mat-option>
-            </mat-select>
-          </mat-form-field><br>
-
+            <mat-select placeholder="" name="RESULTADO_TARJETA" [(ngModel)]="this.fichadatos1Service.selected.RESULTADO_TARJETA" formControlName="RESULTADO_TARJETA">
+                  <mat-option value="">Seleccione</mat-option>
+                  <mat-option value="SI">SI</mat-option>
+                  <mat-option value="NO">NO</mat-option>
+                </mat-select>
+              </mat-form-field><br>
+  
           <mat-label>COMENTARIOS U OBSERVACIONES DEL ENCUESTADOR</mat-label><br>
           <mat-form-field>
                 <input matInput formControlName="OBSERVACIONES" placeholder="" name="OBSERVACIONES" [(ngModel)]="this.fichadatos1Service.selected.OBSERVACIONES">
                 </mat-form-field><br>
 
         </div>
-        </mat-tab>
+      </mat-tab>
     
-          <!-- <button mat-flat-button color="primary" (click)="onSaveFormfichadatos1Service()">
-    
-            <mat-icon>save</mat-icon>save
-          </button> -->
+          
         <mat-tab label="GUARDAR">
         <div class="container">
           <button mat-raised-button color="primary" type="submit" [disabled]="fichadatos1Service.form.invalid"><mat-icon>save</mat-icon>Guardar</button>&nbsp;

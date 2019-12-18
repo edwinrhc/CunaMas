@@ -166,7 +166,7 @@ export class ListTramo4Component implements OnInit {
     this.tramo4Service.selected.OBSM4 = null,
     this.tramo4Service.selected.OBSM5 = null,
     this.tramo4Service.selected.OBSH6 = null,
-    this.tramo4Service.selected.OBSH7 = null
+    this.tramo4Service.selected.OBSH7 = null,
            this.tramo4Service.selected.id = null
     }
 
